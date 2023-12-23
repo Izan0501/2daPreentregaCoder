@@ -8,13 +8,14 @@ const cart = [];
 
 //addToCart-Function
 const addToCart = (e) => {
-
+    //products
     const product = {
         titulo : e.target.dataset.fruit,
         id: e.target.dataset.fruit,
         amount: 1,
     };
 
+    //functionOfIncreasingQuantity
     if (cart.hasOwnProperty(product.titulo)) {
         product.amount = cart[product.titulo].amount + 1;
     };
@@ -22,7 +23,7 @@ const addToCart = (e) => {
     cart[product.titulo] = product;
 
     
-
+    //viewProductsInDom
    console.log(product);    
 };
 
