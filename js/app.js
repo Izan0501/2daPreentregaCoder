@@ -1,11 +1,13 @@
-const contenedor = document.querySelector ('#cart');
-const botones = document.querySelectorAll ('.btn-primary');
+const container = document.querySelector ('#cart');
+const buttons = document.querySelectorAll ('.btn-primary');
 const template = document.querySelector ('#template');
 const fragment = document.createDocumentFragment();
 
+ //cartArray
 const cart = [];
 
-const agregarCart = (e) => {
+//addToCart-Function
+const addToCart = (e) => {
 
     const product = {
         titulo : e.target.dataset.fruit,
@@ -24,7 +26,7 @@ const agregarCart = (e) => {
    console.log(product);    
 };
 
-
-botones.forEach ((item) => {
-    item.addEventListener('click', agregarCart); 
+// buttonsFunctionAdd
+buttons.forEach ((item) => {
+    item.addEventListener('click', addToCart); 
 });
